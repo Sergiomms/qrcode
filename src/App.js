@@ -1,11 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from "./styles/global";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import Navigation from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      QR Code
-    </div>
+    <Router>
+      <GlobalStyle />
+      <ToastContainer autoClose={3000} />
+      <Navigation />
+    </Router>
   );
 }
 
